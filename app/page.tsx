@@ -134,7 +134,7 @@ export default function Home() {
   // FIX: Menggunakan "image_" untuk Top 10 sesuai Supabase
   const top10Photos = Array.from({ length: 10 }, (_, i) => ({ 
     id: `top-${i}`, title: `Top ${i + 1}`, 
-    img: `${baseUrl}/top-season/image_${i + 1}.webp`, 
+    img: `${baseUrl}/top-season/foto_${i + 1}.webp`, 
     video: `${baseUrl}/Vidio/Top_Vidio/vidio_${i + 1}.MP4` 
   }));  
   
