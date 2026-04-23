@@ -283,14 +283,14 @@ export default function Home() {
                 <div><h3 className="text-xs md:text-sm text-gray-400 uppercase tracking-wider font-semibold mb-1">Status</h3><p className="text-white text-base md:text-lg">Pemeran Utama Kesayangan Adit</p></div>
                 <div>
                   <h3 className="text-xs md:text-sm text-gray-400 uppercase tracking-wider font-semibold mb-2">Pesan Spesial</h3>
-                  <div className="space-y-4 md:space-y-6 text-sm md:text-lg text-gray-300 leading-relaxed font-light mt-6 md:mt-8">
-                <p>
-                  Tahun ini aku pengen ngasih kado yang agak beda. Daripada beli barang, aku mikir kenapa nggak aku bikinin aja 'Netflix' khusus versi kita berdua? Lewat baris-baris kode yang aku bangun ini, aku pengen ngumpulin lagi momen-momen random, lucu, sampai momen yang paling bikin salting selama kita bareng.
-                </p>
-                <p>
-                  Makasih banyak ya udah selalu jadi pemeran utama yang paling sabar dan ngertiin aku. Semoga di tanggal <strong className="text-yellow-500 font-normal">24 April</strong> ini dan ke depannya, kamu makin bahagia, impian-impianmu tercapai, dan pastinya... makin banyak petualangan seru yang bisa kita tonton di 'OurFlix' musim-musim berikutnya. <i className="text-white">I love you!</i>
-                </p>
-              </div>
+                  <div className="text-gray-200 space-y-3 font-light leading-relaxed text-sm md:text-base">
+                    <p>
+                      Kamu adalah sosok perempuan yang aku sayangi setelah ibuku. Dengan tawamu yang kadang lucu, marah dan ngambek kamu yang suka ngeselin, dan posesif yang kadang buat aku depresi... tapi di situlah letak bumbunya sayangggg.
+                    </p>
+                    <p>
+                      Makasih banyak untuk waktu dan momen-momen yang kita jalani. Ini bukanlah akhir sayanggg, karena perjalanan ini masih awal buat kita nanti menjalani kehidupan rumah tangga. Semangat yah sayangkuuu cintakuuu, semoga kamu sehat selalu di umur yang makin menua ini. Love u sayangkuu cinta ❤️
+                    </p>
+                  </div>
                 </div>
                 <div className="pt-4 border-t border-zinc-800 text-center"><p className="text-red-500 font-serif italic text-base md:text-lg">"The best thing that ever happened to me."</p></div>
               </div>
