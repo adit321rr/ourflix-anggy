@@ -283,10 +283,14 @@ export default function Home() {
                 <div><h3 className="text-xs md:text-sm text-gray-400 uppercase tracking-wider font-semibold mb-1">Status</h3><p className="text-white text-base md:text-lg">Pemeran Utama Kesayangan Adit</p></div>
                 <div>
                   <h3 className="text-xs md:text-sm text-gray-400 uppercase tracking-wider font-semibold mb-2">Pesan Spesial</h3>
-                  <div className="text-gray-200 space-y-3 font-light leading-relaxed text-sm md:text-base">
-                    <p>Kamu adalah sosok yang selalu berhasil membawa ketenangan lewat kebaikan hati dan kesabaranmu yang luar biasa. Bagiku, kamu bukan sekadar pasangan, tapi juga pendengar paling sempurna untuk segala ceritaku.</p>
-                    <p>Senyummu selalu punya cara magis untuk membuat hariku terasa lebih teduh. Ditambah lagi, kamu adalah partner paling seru, entah itu untuk sekadar asyik jajan berdua atau berpetualang mencari tempat-tempat baru.</p>
-                  </div>
+                  <div className="space-y-4 md:space-y-6 text-sm md:text-lg text-gray-300 leading-relaxed font-light mt-6 md:mt-8">
+                <p>
+                  Tahun ini aku pengen ngasih kado yang agak beda. Daripada beli barang, aku mikir kenapa nggak aku bikinin aja 'Netflix' khusus versi kita berdua? Lewat baris-baris kode yang aku bangun ini, aku pengen ngumpulin lagi momen-momen random, lucu, sampai momen yang paling bikin salting selama kita bareng.
+                </p>
+                <p>
+                  Makasih banyak ya udah selalu jadi pemeran utama yang paling sabar dan ngertiin aku. Semoga di tanggal <strong className="text-yellow-500 font-normal">24 April</strong> ini dan ke depannya, kamu makin bahagia, impian-impianmu tercapai, dan pastinya... makin banyak petualangan seru yang bisa kita tonton di 'OurFlix' musim-musim berikutnya. <i className="text-white">I love you!</i>
+                </p>
+              </div>
                 </div>
                 <div className="pt-4 border-t border-zinc-800 text-center"><p className="text-red-500 font-serif italic text-base md:text-lg">"The best thing that ever happened to me."</p></div>
               </div>
