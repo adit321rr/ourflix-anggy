@@ -33,7 +33,10 @@ const CarouselRow = ({ title, id, photos, setActivePhotoVideo }: { title: string
           <motion.div key={item.id} whileHover={{ scale: 1.05, zIndex: 40 }} transition={{ duration: 0.2 }} onClick={() => setActivePhotoVideo(item.video)} className="relative w-[160px] md:w-[280px] h-[90px] md:h-[160px] flex-none bg-zinc-800 rounded-md cursor-pointer overflow-hidden border border-transparent hover:border-white shadow-lg group">
             <img src={item.img} alt={item.title} className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110" />
             <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10">
-              <div className="w-8 h-8 md:w-12 md:h-12 bg-black/50 rounded-full flex items-center justify-center border border-white/50 backdrop-blur-sm"><span className="text-white text-sm md:text-xl ml-1">▶</span></div>
+              <div className="w-8 h-8 md:w-12 md:h-12 bg-black/50 rounded-full flex items-center justify-center border border-white/50 backdrop-blur-sm">
+                {/* ICON PLAY SVG PENGGANTI EMOJI */}
+                <svg viewBox="0 0 24 24" fill="currentColor" className="w-4 h-4 md:w-6 md:h-6 text-white ml-1"><path d="M8 5v14l11-7z" /></svg>
+              </div>
             </div>
             <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-2 md:p-4">
               <h3 className="text-white font-bold text-xs md:text-base drop-shadow-md">{item.title}</h3>
@@ -78,7 +81,10 @@ const Top10Row = ({ photos, setActivePhotoVideo }: { photos: any[], setActivePho
             <motion.div whileHover={{ scale: 1.05, x: 10, zIndex: 40 }} transition={{ duration: 0.2 }} className="relative w-[110px] md:w-[180px] h-[155px] md:h-[260px] ml-6 md:ml-10 bg-zinc-800 rounded-md overflow-hidden shadow-[10px_0_20px_rgba(0,0,0,0.8)] border border-transparent group-hover:border-white z-10">
               <img src={item.img} alt={item.title} className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110" />
               <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10">
-                <div className="w-8 h-8 md:w-12 md:h-12 bg-black/50 rounded-full flex items-center justify-center border border-white/50 backdrop-blur-sm"><span className="text-white text-sm md:text-xl ml-1">▶</span></div>
+                <div className="w-8 h-8 md:w-12 md:h-12 bg-black/50 rounded-full flex items-center justify-center border border-white/50 backdrop-blur-sm">
+                   {/* ICON PLAY SVG PENGGANTI EMOJI */}
+                  <svg viewBox="0 0 24 24" fill="currentColor" className="w-4 h-4 md:w-6 md:h-6 text-white ml-1"><path d="M8 5v14l11-7z" /></svg>
+                </div>
               </div>
             </motion.div>
           </div>
@@ -122,14 +128,16 @@ export default function Home() {
   const birthdayVideoUrl = "https://www.youtube.com/embed/-6ls0XmdsL8?autoplay=1&rel=0"; 
   const anggyProfilePhotoUrl = "https://qusvxxdfnqlahvxaqylt.supabase.co/storage/v1/object/public/ourflix-media/profil/Anggy-profile.jpg"; 
 
-  // --- 🚨 DATA FOTO & VIDEO (SEMUA OTOMATIS) 🚨 ---
+  // --- 🚨 DATA FOTO & VIDEO ---
   const baseUrl = "https://qusvxxdfnqlahvxaqylt.supabase.co/storage/v1/object/public/ourflix-media";
 
+  // FIX: Menggunakan "image_" untuk Top 10 sesuai Supabase
   const top10Photos = Array.from({ length: 10 }, (_, i) => ({ 
     id: `top-${i}`, title: `Top ${i + 1}`, 
-    img: `${baseUrl}/top-season/foto_${i + 1}.webp`, 
+    img: `${baseUrl}/top-season/image_${i + 1}.webp`, 
     video: `${baseUrl}/Vidio/Top_Vidio/vidio_${i + 1}.MP4` 
   }));  
+  
   const season1Photos = Array.from({ length: 10 }, (_, i) => ({ 
     id: `s1-${i}`, title: `Momen ${i + 1}`, 
     img: `${baseUrl}/season-1/foto_${i + 1}.webp`, 
@@ -195,12 +203,19 @@ export default function Home() {
             Sebuah perjalanan visual merayakan hari spesialmu. Menampilkan momen-momen terbaik yang tertangkap lensa.
           </p>
           <div className="flex flex-row space-x-2 md:space-x-4 pt-2 md:pt-4">
-            <button onClick={() => setShowVideoModal(true)} className="flex items-center justify-center gap-1 md:gap-2 rounded bg-white px-4 md:px-8 py-2 md:py-3 text-sm md:text-lg font-bold text-black transition hover:bg-white/80 shadow-[0_0_15px_rgba(255,255,255,0.3)]">
-              <span>▶</span> Putar Video
+            
+            {/* --- FIX TOMBOL PUTAR VIDEO (Pakai SVG) --- */}
+            <button onClick={() => setShowVideoModal(true)} className="flex items-center justify-center gap-2 rounded bg-white px-4 md:px-8 py-2 md:py-3 text-sm md:text-lg font-bold text-black transition hover:bg-white/80 shadow-[0_0_15px_rgba(255,255,255,0.3)]">
+              <svg viewBox="0 0 24 24" fill="currentColor" className="w-4 h-4 md:w-6 md:h-6"><path d="M8 5v14l11-7z" /></svg>
+              Putar Video
             </button>
-            <button onClick={() => setShowTextModal(true)} className="flex items-center justify-center gap-1 md:gap-2 rounded bg-gray-500/70 px-4 md:px-8 py-2 md:py-3 text-sm md:text-lg font-bold text-white transition hover:bg-gray-500/50 backdrop-blur-sm">
-              <span>ℹ</span> Pesan Untuk Kamu sayang
+            
+            {/* --- FIX TOMBOL PESAN INFO (Pakai SVG) --- */}
+            <button onClick={() => setShowTextModal(true)} className="flex items-center justify-center gap-2 rounded bg-[#515451]/70 px-4 md:px-8 py-2 md:py-3 text-sm md:text-lg font-bold text-white transition hover:bg-[#515451]/50 backdrop-blur-sm">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-4 h-4 md:w-6 md:h-6"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+              Pesan Spesial
             </button>
+
           </div>
         </div>
       </div>
@@ -319,7 +334,6 @@ export default function Home() {
             <button onClick={() => setActivePhotoVideo(null)} className="absolute top-4 md:top-5 right-4 md:right-8 text-white text-4xl md:text-5xl font-light hover:text-gray-400 z-50 transition">&times;</button>
             <motion.div initial={{ scale: 0.9, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} exit={{ scale: 0.9, opacity: 0 }} transition={{ type: "spring", damping: 25, stiffness: 300 }} className="relative w-full max-w-4xl aspect-video bg-black rounded-xl overflow-hidden shadow-2xl border border-zinc-800">
               
-              {/* PENGECEKAN TIPE VIDEO: Kalau asalnya dari YouTube pakai iframe, selain itu pakai tag video biasa */}
               {activePhotoVideo.includes('youtube.com') ? (
                 <iframe src={activePhotoVideo} className="w-full h-full outline-none border-none" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
               ) : (
