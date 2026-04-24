@@ -352,3 +352,5 @@ export default function Home() {
     </main>
   );
 }
+
+// NOTE: Kode ini adalah halaman utama (Home) untuk aplikasi Next.js yang menampilkan berbagai komponen seperti navbar, hero section, carousel foto, dan beberapa modal untuk video dan teks ucapan. Data foto dan video diambil dari Supabase Storage dengan struktur folder yang sudah ditentukan.
