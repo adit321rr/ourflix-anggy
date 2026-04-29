@@ -184,7 +184,7 @@ export default function Home() {
         <div className="flex items-center gap-3">
           <span className="hidden md:block text-sm font-medium drop-shadow-md">Spesial untuk Anggy</span>
           <div onClick={() => setShowProfileModal(true)} className="w-8 h-8 md:w-10 md:h-10 rounded overflow-hidden shadow-md cursor-pointer border border-transparent hover:border-white transition-all hover:scale-105">
-            <img src={anggyProfilePhotoUrl} alt="Profil Anggy" className="w-full h-full object-cover" />
+            <img src={anggyProfilePhotoUrl} alt="Profil Anggi" className="w-full h-full object-cover" />
           </div>
         </div>
       </nav>
@@ -250,7 +250,7 @@ export default function Home() {
             </button>
           </div>
           <p className="mt-2 text-[10px] md:text-xs opacity-70">
-            © 2026 OurFlix. Dikodekan dengan <span className="text-red-500 animate-pulse inline-block">❤️</span> oleh Nasyrun Adetiya khusus untuk hari lahir Anggy.
+            © 2026 OurFlix. Dikodekan dengan <span className="text-red-500 animate-pulse inline-block">❤️</span> oleh Nasyrun Adetiya khusus untuk hari lahir anggi.
           </p>
         </div>
       </footer>

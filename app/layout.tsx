@@ -13,10 +13,10 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "OurFlix | Happy Birthday Anggy! 🎉",
+  title: "OurFlix | Happy Birthday Anggi! 🎉",
   description: "Sebuah perjalanan visual merayakan hari spesialmu. Dibuat khusus hanya untukmu.",
   openGraph: {
-    title: "🍿 Tiket VIP OurFlix: Khusus Anggy",
+    title: "🍿 Tiket VIP OurFlix: Khusus Anggi",
     description: "Ada kejutan dan pesan rahasia buat kamu di sini. Buruan buka ya sayang! ❤️",
     images: [
       {
